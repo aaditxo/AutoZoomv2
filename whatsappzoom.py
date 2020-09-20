@@ -7,9 +7,10 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from time import sleep
 from easygui import *
+import winsound
 import pyautogui
 
-contacts = ["Contact 1 Name","Contact 2 Name"]
+contacts = ["BCK-MATHS XII","Bck XII - chemistry","Physics 2021 "]
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("https://web.whatsapp.com")
 print("Scan QR Code, And then Enter")
@@ -72,6 +73,7 @@ while 1:
 						meetings.update({meetingid:passcode})
 						msg = f"Do you want to join Zoom Meeting hosted by {contact}?"
 						title = "Join Zoom Meeting"
+						winsound.Beep(3000,1000)
 						if ccbox(msg, title):
 						    print(f'You chose to join {meetingid} hosted by {contact} using passcode {passcode}.')
 						    sleep(1)
