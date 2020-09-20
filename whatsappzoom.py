@@ -9,7 +9,7 @@ from time import sleep
 from easygui import *
 import pyautogui
 
-contacts = ["+965 9929 0755"]
+contacts = ["Contact 1 Name","Contact 2 Name"]
 driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("https://web.whatsapp.com")
 print("Scan QR Code, And then Enter")
